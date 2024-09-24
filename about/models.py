@@ -4,6 +4,9 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class About(models.Model):
+    """
+    Stores information about me.
+    """
     title = models.CharField(max_length=200)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
@@ -13,6 +16,9 @@ class About(models.Model):
         return self.title
 
 class CollaborateRequest(models.Model):
+    """
+    Stores a collaboration request.
+    """
     name = models.CharField(max_length=200)
     email = models.EmailField()
     message = models.TextField()
